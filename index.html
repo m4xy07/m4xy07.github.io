@@ -1,17 +1,203 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      background-image: radial-gradient(circle at 50% 50%, #f5f5f5, #e5e5e5),
+        linear-gradient(to right, #57b8e0, #4285f4);
+      background-size: 200px 200px, 100% 100%;
+      background-position: 0 0, 0 0;
+      animation: background-animation 10s ease-in-out infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes background-animation {
+      0% {
+        background-position: 0 0, 0 0;
+      }
+      50% {
+        background-position: 100% 100%, 100% 100%;
+      }
+      100% {
+        background-position: 0 0, 0 0;
+      }
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .profile-pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-image: url('https://i.imgur.com/1g9EnhG.png');
+      background-size: cover;
+      background-position: center;
+      animation: unsheathe 2s ease-in-out infinite;
+      border: 5px solid #57b8e0;
+      box-shadow: 0 0 20px rgba(87, 184, 224, 0.5);
+    }
+
+    .social-links {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fly-in 1s ease-in-out forwards;
+      animation-delay: 5s;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      background-color: #57b8e0;
+      border-radius: 50%;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .social-link:hover {
+      transform: scale(1.2);
+      background-color: #4285f4;
+    }
+
+    .social-icon {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    @keyframes unsheathe {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(360deg);
+        border-color: #57b8e0;
+        box-shadow: 0 0 20px rgba(87, 184, 224, 0.5);
+      }
+      100% {
+        transform: rotate(720deg);
+        border-color: #57b8e0;
+        box-shadow: 0 0 20px rgba(87, 184, 224, 0.5);
+      }
+    }
+
+    @keyframes fly-in {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
+
+      .social-links {
+        bottom: 10px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+      }
+
+      .social-icon {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-	<div class="profile-pic">
-		<img src="https://i.imgur.com/iMBTszO.png" alt="Profile Pic">
-	</div>
-	<div class="social-links">
-		<a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-		<a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-		<a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-		<a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-	</div>
+  <div class="container">
+    <div class="profile-pic"></div>
+    <div class="social-links">
+      <a href="#" class="social-link">
+        <i class="fab fa-github social-icon"></i>
+      </a>
+      <a href="#" class="social-link">
+        <i class="fab fa-linkedin-in social-icon"></i>
+      </a>
+      <a href="#" class="social-link">
+        <i class="fab fa-twitter social-icon"></i>
+      </a>
+    </div>
+  </div>
+  <canvas id="particles"></canvas>
+  <script>
+    // Particle effect
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const numParticles = 100;
+    const particles = [];
+
+    for (let i = 0; i < numParticles; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 5 + 1,
+        speedX: Math.random() * 3 - 1.5,
+        speedY: Math.random() * 3 - 1.5,
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < numParticles; i++) {
+        const p = particles[i];
+        p.x += p.speedX;
+        p.y += p.speedY;
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+        ctx.fillStyle = `rgba(87, 184, 224, ${p.size / 5})`;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Font Awesome
+    const script = document.createElement('script');
+    script.src = 'https://kit.fontawesome.com/a076d05399.js';
+    script.crossOrigin = 'anonymous';
+    document.head.appendChild(script);
+  </script>
 </body>
 </html>
