@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Shaikh | Personal Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <style>
+      #vantajs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vantajs"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="https://m4xy.org">Aman Shaikh</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/aman-shaikh33/">Linkedin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/m4xy07" target="_blank">GitHub</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://m4xy.org" target="_blank">Website</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="about">
+        <div class="container">
+          <h1>About Me</h1>
+          <p>I'm Aman Shaikh, </p>
+		  <p>an enthusiasitc coder with a passion to solve complex problems</p>
+		  <p>currently a First Year Student pursuing B.Tech CSE</p>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="container">
+          <h1>Projects</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://i.imgur.com/AwRpZvZ.png" alt="Crop Station">
+                <div class="card-body">
+                  <h5 class="card-title">Crop Station</h5>
+                  <p class="card-text">Arduino based Crop & Weather Suitability Station to help aid farmers with their yield</p>
+                  <a href="https://github.com/m4xy07/CropStation" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://i.imgur.com/noQ8C22.png" alt="Weather Station">
+                <div class="card-body">
+                  <h5 class="card-title">Weather Station</h5>
+                  <p class="card-text">An Arduino based weather station which shows data using the sensors connected.</p>
+                  <a href="https://github.com/m4xy07/Weather_Station" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://i.imgur.com/4kAi0ra.png" alt="WEB UI">
+                <div class="card-body">
+                  <h5 class="card-title">Weather Web UI</h5>
+                  <p class="card-text">UI for the weather & crop station incl. a graph using realtime data from the Arduino.</p>
+                  <a href="https://github.com/m4xy07/weather-web-ui" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#vantajs",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xa7a7a7,
+        backgroundColor: 0x0,
+        points: 8.00,
+        spacing: 16.00,
+        showDots: false
+      })
+    </script>
+  </body>
+</html>
