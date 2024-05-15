@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformers Diner</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #ecf0f1;
+            --accent-color: #3498db;
+            --light-grey: #bdc3c7;
+            --dark-grey: #34495e;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--dark-grey);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: var(--dark-grey);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: url('https://i.imgur.com/g7Cpnf5.jpeg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: var(--secondary-color);
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 0;
+        }
+
+        .menu-item {
+            flex-basis: 30%;
+            margin: 15px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .menu-item h3 {
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .menu-item p {
+            padding: 0 15px 15px;
+            margin: 0;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .order-form {
+            padding: 50px 0;
+            background-color: var(--light-grey);
+            text-align: center;
+        }
+
+        .order-form h2 {
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        .form-control label,
+        .form-control input,
+        .form-control textarea {
+            display: block;
+            width: 90%;
+            margin: auto;
+        }
+
+        .form-control input,
+        .form-control textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--dark-grey);
+        }
+
+        .form-control input[type="submit"] {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-control input[type="submit"]:hover {
+            background-color: var(--dark-grey);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+            }
+
+            .menu-item {
+                flex-basis: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Transformers Diner</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <a href="#menu">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h2>Welcome to the Transformers Diner</h2>
+    </div>
+    <main class="container">
+        <section class="menu" id="menu">
+            <div class="menu-item">
+                <img src="https://i.imgur.com/m1ebKw1.jpeg" alt="Transformers Burger">
+                <h3>Transformers Burger</h3>
+                <p>A delicious burger with all the Transformers knowledge! $9.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.imgur.com/UdKDp8z.jpeg" alt="Megatron Shake">
+                <h3>Megatron Shake</h3>
+                <p>A delicious chocolate shake topped with whipped cream and a Megatron figurine! $4.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.imgur.com/8MqQWea.png" alt="Bumblebee Fries">
+                <h3>Bumblebee Fries</h3>
+                <p>Crispy fries seasoned with Bumblebee's secret spices ;) $3.99</p>
+            </div>
+        </section>
+        <section class="order-form" id="order">
+            <h2>Place Your Order</h2>
+            <form>
+                <div class="form-control">
+                    <label for="transformers-burger-quantity">Transformers Burger Quantity:</label>
+                    <input type="number" id="transformers-burger-quantity" name="transformers-burger-quantity" min="0">
+                </div>
+                <div class="form-control">
+                    <label for="megatron-shake-quantity">Megatron Shake Quantity:</label>
+                    <input type="number" id="megatron-shake-quantity" name="megatron-shake-quantity" min="0">
+                </div>
+                <div class="form-control">
+                    <label for="bumblebee-fries-quantity">Bumblebee Fries Quantity:</label>
+                    <input type="number" id="bumblebee-fries-quantity" name="bumblebee-fries-quantity" min="0">
+                </div>
+                <div class="form-control">
+                    <label for="special-requests">Special Requests:</label>
+                    <textarea id="special-requests" name="special-requests"></textarea>
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="Go To Checkout">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 m4xy07 - Aman S. All rights reserved.</p>
+    </footer>
+</body>
+</html>
