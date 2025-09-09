@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aman Shaikh • Software Engineer</title>
+    <!-- External CSS split out into styles.css. Keep both files in the same folder. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- =============================
+       HEADER / NAVIGATION
+  ============================== -->
+    <header>
+      <nav class="navbar" aria-label="Primary Navigation">
+        <div class="navbar-brand" aria-label="Brand">
+          <!-- <div class="navbar-badge" aria-hidden="true"><span>Aman</span></div> -->
+          <span class="navbar-title">Aman Shaikh</span>
+        </div>
+        <div class="navbar-links">
+          <a href="#about">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="wrap">
+      <!-- =============================
+         HERO
+    ============================== -->
+      <section class="hero-section" id="home" aria-label="Hero">
+        <div class="hero-card">
+          <div class="hero-eyebrow">
+            Software Engineer • IoT • Web • Automation
+          </div>
+          <h1>Hi, I’m <span class="gradient-text">Aman Shaikh</span>.</h1>
+          <p class="hero-lead">
+            I build efficient, scalable systems—from smart farming IoT to
+            dynamic web apps. Currently based in Pune, India and pursuing B.Tech
+            CSE at PCET’s Pimpri Chinchwad University.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://drive.google.com/file/d/1dgh3bEfNeAWB4Gu6oKu1A7wgyazpj0ze/view?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Aman Shaikh's resume"
+              >View Résumé</a
+            >
+            <a
+              class="btn"
+              href="mailto:aman.33shaikh@gmail.com"
+              aria-label="Email Aman Shaikh"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 0 8 6 8-6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Email
+            </a>
+            <a
+              class="btn"
+              href="https://github.com/m4xy07"
+              target="_blank"
+              rel="noopener"
+              aria-label="Aman Shaikh on GitHub"
+              >GitHub</a
+            >
+            <a
+              class="btn"
+              href="https://linkedin.com/in/aman-shaikh33"
+              target="_blank"
+              rel="noopener"
+              aria-label="Aman Shaikh on LinkedIn"
+              >LinkedIn</a
+            >
+            <a
+              class="btn"
+              href="https://m4xy.org"
+              target="_blank"
+              rel="noopener"
+              aria-label="Aman Shaikh's personal website"
+              >Website</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================
+         ABOUT
+    ============================== -->
+      <section id="about" class="about-section">
+        <h2 class="section-title">About</h2>
+        <p>
+          Software Engineer with hands-on experience in IoT, web development,
+          and automation. I focus on building systems that are fast, resilient,
+          and easy to use—whether that’s a smart-farming platform powered by
+          real-time sensors or a responsive website that loads in a blink.
+        </p>
+        <p class="text-muted">
+          I enjoy turning ideas into shipped products and leading small teams to
+          deliver user-centric outcomes.
+        </p>
+      </section>
+
+      <!-- =============================
+         SKILLS
+    ============================== -->
+      <section id="skills" class="skills-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid card">
+          <div>
+            <strong>Languages</strong>
+            <div class="skills-list" aria-label="Programming languages">
+              <span class="pill">C</span>
+              <span class="pill">C++</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+            </div>
+          </div>
+          <div>
+            <strong>Technologies</strong>
+            <div class="skills-list" aria-label="Technologies">
+              <span class="pill">IoT</span>
+              <span class="pill">Arduino</span>
+              <span class="pill">Raspberry Pi</span>
+              <span class="pill">React</span>
+              <span class="pill">Next.js</span>
+              <span class="pill">Express.js</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">MongoDB</span>
+              <span class="pill">AWS</span>
+              <span class="pill">DigitalOcean</span>
+              <span class="pill">Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================
+         PROJECTS
+    ============================== -->
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid grid cols-3">
+          <article class="project-card card" aria-labelledby="proj-cropsense">
+            <div class="project-meta">
+              <span class="pill">IoT</span><span class="pill">Raspberry Pi</span
+              ><span class="pill">Web Platform</span>
+            </div>
+            <h3 id="proj-cropsense">CropSense — Smart Farming System</h3>
+            <ul>
+              <li>
+                Real-time farm data collection using IoT sensors, improving crop
+                yields by <strong>~30%</strong>.
+              </li>
+              <li>
+                Web dashboard for live telemetry, crop recommendations, and
+                alerts.
+              </li>
+              <li>
+                AI-assisted disease identification and predictive analytics.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-card card" aria-labelledby="proj-aura">
+            <div class="project-meta">
+              <span class="pill">AI</span
+              ><span class="pill">Raspberry Pi 5</span
+              ><span class="pill">DeepFace</span>
+            </div>
+            <h3 id="proj-aura">Aura — Facial Expression Robot</h3>
+            <ul>
+              <li>
+                Integrated facial recognition (DeepFace) and LLM-driven
+                responses for dynamic expressions.
+              </li>
+              <li>
+                Speech-to-text and reactions to physical stimuli for interactive
+                behavior.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-card card" aria-labelledby="proj-comic">
+            <div class="project-meta">
+              <span class="pill">Flask</span><span class="pill">Socket.IO</span
+              ><span class="pill">Automation</span>
+            </div>
+            <h3 id="proj-comic">ReadAllComics → PDF Downloader</h3>
+            <ul>
+              <li>
+                Flask backend to fetch comics and generate PDFs for offline
+                reading.
+              </li>
+              <li>
+                Real-time progress via Socket.IO and job scheduling with
+                APScheduler.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================
+         EXPERIENCE
+    ============================== -->
+      <section id="experience" class="experience-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline-card card timeline">
+          <div class="timeline-item">
+            <h3>
+              Freelance Web Developer
+              <span class="text-muted">• Jan 2024 – Present</span>
+            </h3>
+            <div class="timeline-range text-muted">
+              React (Next.js) • Tailwind CSS • Performance • Accessibility
+            </div>
+            <ul>
+              <li>
+                Designed & optimized responsive websites for multiple clients,
+                improving UX, speed, and cross-device compatibility.
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>
+              Technical Lead, Innovare — IEEE Student Chapter (PCU)
+              <span class="text-muted">• Oct 2024 – Present</span>
+            </h3>
+            <ul>
+              <li>
+                Led a team of 3 to run tech events and maintain the chapter
+                website.
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>
+              Student Coordinator — Institution Innovation Council (PCU)
+              <span class="text-muted">• Nov 2023 – Present</span>
+            </h3>
+            <ul>
+              <li>
+                Organized seminars, sessions, and competitions for students.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================
+         EDUCATION
+    ============================== -->
+      <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card card">
+          <h3>
+            PCET’s Pimpri Chinchwad University — B.Tech in Computer Science
+            Engineering
+          </h3>
+          <div class="text-muted">Aug 2023 – Present</div>
+          <p class="text-muted">
+            Relevant coursework: Computer Networks, Data Structures &
+            Algorithms, IoT Development, DBMS.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============================
+         ACHIEVEMENTS
+    ============================== -->
+      <section id="achievements" class="achievements-section">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-card card">
+          <ul class="list-check">
+            <li>
+              <strong>1st Place</strong> — PCU Ideathon 2.0 ’25 for
+              <em>CropSense</em>.
+            </li>
+            <li>
+              <strong>1st Place</strong> — PCU Project Expo ’25 for
+              <em>CropSense</em>.
+            </li>
+            <li>
+              <strong>2nd Place</strong> — TechNovation (Nowrosjee Wadia
+              College, National) for <em>CropSense</em>.
+            </li>
+            <li>
+              <strong>2nd Place</strong> — PCU Ideathon 2K24 for
+              <em>EcoCred</em> (Incentivized Recycling & Waste Management).
+            </li>
+            <li>
+              <strong>2nd Place</strong> — PCCOER Agro TechFest 2K24 for Crop &
+              Weather Suitability Station.
+            </li>
+            <li>
+              <strong>2nd Place</strong> — PCU Project Expo ’24 for
+              Arduino-based Crop & Weather Monitoring System.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================
+         CERTIFICATES
+    ============================== -->
+      <section id="certificates" class="certificates-section">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates-card card">
+          <ul class="list-check">
+            <li>
+              Spoken Tutorial, IIT Bombay —
+              <strong>C Programming (97.5%)</strong>;
+              <strong>Java Programming (92.5%)</strong>.
+            </li>
+            <li>
+              Red Hat — <strong>RH124</strong> (System Administration I),
+              <strong>RH134</strong> (System Administration II).
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============================
+         CONTACT
+    ============================== -->
+      <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-card card contact-cards">
+          <div class="contact-item">
+            <strong>Location</strong>
+            <div>Pune, MH, India</div>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:aman.33shaikh@gmail.com">aman.33shaikh@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+919552572779">+91 9552572779</a>
+          </div>
+          <div class="contact-item">
+            <strong>Links</strong>
+            <a
+              href="https://linkedin.com/in/aman-shaikh33"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/m4xy07" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2025 Aman Shaikh. All rights reserved.</div>
+        <div class="text-muted">AWP Assignment | Roll No: F-2</div>
+      </div>
+    </footer>
+  </body>
+</html>
